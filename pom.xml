@@ -4,7 +4,7 @@
     <groupId>io.github.jeddict</groupId>
     <artifactId>jeddict</artifactId>
     <name>Jeddict</name>
-    <version>6.5.0</version>
+    <version>6.6.0</version>
     <packaging>pom</packaging>
     <modules>
         <module>jeddict-lib</module>
@@ -24,7 +24,7 @@
     <properties>
         <root.dir>${basedir}</root.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <netbeans.version>RELEASE250</netbeans.version>
+        <netbeans.version>RELEASE270</netbeans.version>
         <netbeans.installation>${root.dir}/../incubator-netbeans/nbbuild/netbeans</netbeans.installation>
         <nbm.cluster>jeddict</nbm.cluster>
         <nbm.build.dir>${root.dir}/../jeddict-cluster</nbm.build.dir>
@@ -131,7 +131,27 @@
             </modules>
         </profile>
     </profiles>
-
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.google.inject</groupId>
+                <artifactId>guice</artifactId>
+                <version>5.1.0</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.netbeans.modules</groupId>
+                <artifactId>org-netbeans-modules-maven-embedder</artifactId>
+                <version>${netbeans.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.jspecify.jspecify</groupId>
+                        <artifactId>jspecify</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <repositories>
         <repository>
             <id>netbeans-modules</id>

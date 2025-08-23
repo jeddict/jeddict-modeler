@@ -4,7 +4,7 @@
     <parent>
         <groupId>io.github.jeddict</groupId>
         <artifactId>jeddict</artifactId>
-        <version>6.5.0</version>
+        <version>6.6.0</version>
     </parent>
     <artifactId>jcode-util</artifactId>
     <name>jCode Util</name>
@@ -35,6 +35,18 @@
                         </dependency>
                         <dependency>
                             <id>org.netbeans.modules:org-netbeans-modules-maven-embedder</id>
+                            <type>impl</type>
+                        </dependency>
+                        <dependency>
+                            <id>org.netbeans.modules:org-netbeans-modules-utilities</id>
+                            <type>impl</type>
+                        </dependency>
+                        <dependency>
+                            <id>org.netbeans.modules:org-netbeans-modules-dbschema</id>
+                            <type>impl</type>
+                        </dependency>
+                        <dependency>
+                            <id>org.netbeans.modules:org-netbeans-modules-maven-indexer</id>
                             <type>impl</type>
                         </dependency>
                     </moduleDependencies>
