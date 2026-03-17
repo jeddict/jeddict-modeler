@@ -332,7 +332,7 @@ public final class JPQLEditorPanel extends GenericDialog implements ModelerPanel
 
                                 ph2.progress(50);
                                 ph2.setDisplayName(NbBundle.getMessage(JPQLEditorPanel.class, "queryParsingPassControlToProvider"));
-                                jpqlResult = queryExecutor.execute(jpql, selectedConfigObject, pe, props, provider, 0, ph2, false);
+                                jpqlResult = queryExecutor.execute(jpql, puObject.getPersistence(), selectedConfigObject, pe, props);
                                 ph2.progress(80);
                                 ph2.setDisplayName(NbBundle.getMessage(JPQLEditorPanel.class, "queryParsingProcessResults"));
 
