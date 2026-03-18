@@ -950,6 +950,7 @@ NbBundle.getMessage(JPQLEditorPanel.class, "progressTaskname"));//GEN-LAST:event
             PersistenceUnit pu = (PersistenceUnit) puConfigMap.get(puComboBox.getSelectedItem());
             ph.start(100);
             getController().executeJPQLQuery(jpqlEditor.getText(),
+                    puObject.getPersistence(),
                     pu,
                     pe,
                     getMaxRowCount(),
